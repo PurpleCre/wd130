@@ -32,9 +32,44 @@ h6 {
   color: var(--primary-color);
 }
 
+header, main, footer {
+  max-width: 840px;
+  margin: 0 auto;
+}
+
 header {
+  max-width: 840px;
+  margin: 0 auto;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 7fr;
   padding: 20px;
   background-color: var(--secondary-color);
+}
+
+header img {
+  margin: 0 0.5rem;
+  width: 100px;
+  height: auto;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-evenly;
+  font-weight: bold;
+  border: dotted 4px black;
+  background-color: var(--nav-background-color);
+}
+
+header nav a {
+  color: var(--nav-link-color);
+  text-decoration: none;
+  border-right: dotted 4px var(--accent1-color);
+  padding-right: 40px;
+}
+
+header nav a:last-of-type {
+  border-right: none;
 }
 
 p {
@@ -64,7 +99,31 @@ nav a:hover {
   background-color: var(--nav-hover-background-color);
 }
 
-/* Class Selectors */
+figure {
+  display: grid;
+  align-self: baseline;
+  max-width: 120px;
+  max-height: 142px;
+}
+figcaption {
+  background-color: var(--secondary-color);
+  /* color: var(--accent2-color); */
+  font: var(--paragraph-font);
+  padding: 2px;
+  text-align: center;
+}
+
+footer {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  background-color: var(--accent1-color);
+  text-align: center;
+  padding: 20px;
+}
+
+/* Class And ID Selectors */
 
 div.hero {
   position: relative;
@@ -79,7 +138,7 @@ div.hero {
 .hero h1 {
   position: absolute;
   top: 10px;
-  left: 250px;
+  left: 400px;
   word-spacing: 20px;
   text-align: center;
   color: var(--secondary-color);
@@ -98,4 +157,46 @@ div.hero {
   float: right;
   width: auto;
   height: 10rem;
+}
+
+#history {
+  padding-top: 25px;
+  margin: 5px;
+}
+
+#history h2 {
+  text-align: center;
+}
+
+#history p:last-of-type {
+  padding-top: 0;
+  font-size: x-large;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#adventure {
+  display: grid;
+  align-items: center;
+  border: thin var(--accent1-color) solid;
+  margin-top: 10px;
+  padding-bottom: 20px;
+  background-color: var(--secondary-color);
+}
+
+#adventure h2 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  grid-column: 1/6;
+  text-align: center;
+}
+
+#adventure img {
+  width: 150px;
+  max-height: 120px;
+}
+
+.sociallinks {
+  justify-self: last baseline;
+  background-color: inherit;
+  color: var(--nav-link-color);
 }

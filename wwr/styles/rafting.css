@@ -105,6 +105,7 @@ figure {
   max-width: 120px;
   max-height: 142px;
 }
+
 figcaption {
   background-color: var(--secondary-color);
   /* color: var(--accent2-color); */
